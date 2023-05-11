@@ -8,6 +8,7 @@ class tes
     private:
         int value = 0;
     public: 
+        tes(){}
         tes(int value_)
         {
             value = value_;
@@ -20,8 +21,13 @@ class tes
 
 class tes2
 {
-    tes coba = tes(2);
+    tes coba;
     public :
+        tes2(){}
+        tes2(int value = 0)
+        {
+            coba = tes(value);
+        }
         void tes22()
         {
             coba.tesOut();
@@ -30,7 +36,7 @@ class tes2
 
 int main()
 {
-    tes2 tesss;
+    tes2 tesss(20);
     tesss.tes22();
     return 0;
 }

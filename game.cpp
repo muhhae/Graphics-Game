@@ -509,7 +509,6 @@ int main()
     initwindow(1368, 720, "Dungeon Fighter");
     while(1)
     {
-
         settextjustify(LEFT_TEXT, CENTER_TEXT);
 
         Mage player1(getmaxx() - 200, 300, 3);
