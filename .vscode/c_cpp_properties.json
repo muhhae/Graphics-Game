@@ -11,9 +11,17 @@
                 "_UNICODE"
             ],
             "cStandard": "c17",
-            "intelliSenseMode": "windows-gcc-x64",
+            "intelliSenseMode": "windows-gcc-x86",
             "compilerPath": "D:/Other/TDM-GCC-32/bin/g++.exe",
-            "compilerArgs": []
+            "compilerArgs": [
+                "-lbgi ",
+                "-lgdi32 ",
+                "-lcomdlg32 ",
+                "-luuid ",
+                "-loleaut32 ",
+                "-lole32"
+            ],
+            "cppStandard": "c++17"
         }
     ],
     "version": 4

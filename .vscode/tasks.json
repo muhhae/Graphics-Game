@@ -3,7 +3,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file",
-            "command": "D:/Other/TDM-GCC-32/bin/g++.exe",
+            "command": "<YOUR COMPILER DIRECTORY>/bin/g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -12,7 +12,7 @@
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "D:/Other/TDM-GCC-32/bin"
+                "cwd": "<YOUR COMPILER DIRECTORY>/bin"
             },
             "problemMatcher": [
                 "$gcc"
