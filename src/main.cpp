@@ -1,108 +1,13 @@
-#include <iostream>
-#include <string>
-#include <graphics.h>
-#include <cmath>
+#include "lib/myLib.hpp"
 
 using namespace std;
-
-class vector2
-{
-    public :
-        int x, y;
-        vector2(){}
-        vector2(int x_, int y_)
-        {
-            x = x_; y = y_;
-        }
-};
-
-class gameScreen
-{
-    private :
-        int frameBuffer = 2;
-        int activePage = 0;
-        int visualPage = 1;
-    public :
-        void screenUpdate()
-        {
-            activePage++;
-            if (activePage >= frameBuffer) activePage = 0;
-
-            visualPage++;
-            if (visualPage >= frameBuffer) visualPage = 0;
-
-            setactivepage(activePage);
-            setvisualpage(visualPage);
-
-            cleardevice();
-        }  
-};
-
-class C_Bar
-{
-    private :
-        int color;
-        int b_color;
-
-        vector2 position;
-
-        float xSize;
-        float ySize;
-        float percentage = 1;
-
-    public :
-        // C_Bar(){}
-        C_Bar(int x_ = 0, int y_ = 0, float xSize_ = 200, float ySize_ = 20, int color_ = RED, int b_color_ = WHITE)
-        {
-            position.x = x_;
-            position.y = y_;
-
-            xSize = xSize_;
-            ySize = ySize_;
-
-            color = color_;
-            b_color = b_color_;
-        }
-
-        void setPosition(int x_, int y_)
-        {
-            position.x = x_;
-            position.y = y_;
-        }
-
-        void setColor(int color_)
-        {
-            color = color_;
-        }
-
-        void setSize(int x_ = 200, int y_ = 20)
-        {
-            xSize = x_;
-            ySize = y_;
-        }
-
-        void setPercentage(float percentage_)
-        {
-            percentage = percentage_;
-            if (percentage < 0) percentage = 0;
-        }
-
-        void update()
-        {
-            setfillstyle(SOLID_FILL, b_color);
-            bar(position.x - 1, position.y - 1, position.x + (int)xSize + 1, position.y + (int)ySize + 1);
-
-            setfillstyle(SOLID_FILL, color);
-            bar(position.x, position.y, position.x + (int)(xSize * percentage), position.y + (int)(ySize));
-        }
-};
 
 class Knight
 {
     private :
 
-        vector2 position;
-        vector2 size;
+        Vector2 position;
+        Vector2 size;
 
         bool hadapKanan = 1;
 
@@ -278,7 +183,7 @@ class Knight
             return attackComplete;
         }
 
-        vector2 getPosition()
+        Vector2 getPosition()
         {
             return position; 
         }
@@ -304,8 +209,8 @@ class Mage
 {
     private :
 
-        vector2 position;
-        vector2 size;
+        Vector2 position;
+        Vector2 size;
 
         bool hadapKanan = 0;
 
@@ -435,7 +340,7 @@ class Mage
 
 
             string s = "Sprite\\Mage\\" + state + "\\" + to_string(frame / delayFrame) + ".gif";
-            cout<<s<<endl;
+            // cout<<s<<endl;
 
             char* char_array = new char[s.length() + 1];
 
@@ -489,7 +394,7 @@ class Mage
             return range;
         }
 
-        vector2 getPosition()
+        Vector2 getPosition()
         {
             return position; 
         }

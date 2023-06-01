@@ -21,7 +21,8 @@
                 "-loleaut32 ",
                 "-lole32"
             ],
-            "cppStandard": "c++17"
+            "cppStandard": "c++17",
+            "configurationProvider": "ms-vscode.makefile-tools"
         }
     ],
     "version": 4

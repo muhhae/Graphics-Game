@@ -8,7 +8,7 @@ CXXFLAGS = -Wall -Wextra -g3 -std=gnu++17
 LDFLAGS = -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32
 
 # Makefile settings - Can be customized.
-APPNAME = myapp
+APPNAME = DungeonFighter
 EXT = .cpp
 SRCDIR = src
 OBJDIR = obj
